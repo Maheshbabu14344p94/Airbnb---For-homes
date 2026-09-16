@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #222; background: #f4f4f1; font-synthesis: none; text-rendering: optimizeLegibility; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 1100px; background: #f4f4f1; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+::selection { background: rgba(255, 56, 92, .18); }
+
+@layer utilities {
+  .glass-pill { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+  .photo-tile { transform-style: preserve-3d; }
+  .shadow-modal { box-shadow: 0 30px 90px rgba(0,0,0,.22); }
+  .shadow-soft { box-shadow: 0 16px 40px rgba(0,0,0,.12); }
+  .floating-surface { transform-style: preserve-3d; will-change: transform; }
+  .font-serif { font-family: 'DM Serif Display', Georgia, serif; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+}
